@@ -6,6 +6,7 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class Splash extends AppCompatActivity {
     private static AppCompatActivity activity;
 
@@ -16,7 +17,10 @@ public class Splash extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         activity = this;
         this.launchMainActivity();
-        
+    }
+
+    private void checkForUpdate() {
+        String releaseURL = "https://api.github.com/repos/abh80/lyricist/releases";
     }
 
     public static boolean end() {
